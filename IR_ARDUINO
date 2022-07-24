@@ -1,0 +1,22 @@
+int a;
+
+void setup(){
+  Serial.begin(9600);
+  pinMode(8, INPUT);
+  pinMode(2, OUTPUT);
+  
+}
+
+void loop(){
+  a = digitalRead(8);
+  if(a==HIGH){
+    Serial.println(" No object detected");
+    digitalWrite(2, LOW);
+  }
+  else{
+    Serial.println(" object detected");
+    digitalWrite(2, HIGH);
+  }
+}  
+
+  
